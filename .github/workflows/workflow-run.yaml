@@ -1,0 +1,17 @@
+name: workflow-run
+
+on:
+  workflow_run:
+    workflows:
+      - test-workflow
+    types:
+      - completed
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print env
+        run: echo "$obj"
+        env:
+          obj: ${{ toJson(github.event) }}
