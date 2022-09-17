@@ -1,9 +1,8 @@
 name: test-workflow
 
 on:
-  push:
   schedule:
-    - cron: "* * * * *"
+    - cron: 0 * * * *
   workflow_dispatch:
 
 jobs:
