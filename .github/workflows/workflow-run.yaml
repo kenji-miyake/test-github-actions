@@ -14,7 +14,7 @@ jobs:
       - name: Print env
         run: echo "$obj"
         env:
-          obj: ${{ toJson(github.event) }}
+          obj: ${{ toJson(github) }}
 
       - name: Print event
         run: echo "event = ${{ github.event.workflow_run.event }}"
