@@ -1,9 +1,6 @@
 name: test-workflow
 
 on:
-  push:
-    branches:
-      - ${{ github.event.repository.default_branch }}
   schedule:
     - cron: "* * * * *"
   workflow_dispatch:
